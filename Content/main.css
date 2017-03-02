@@ -1,0 +1,21 @@
+﻿body {
+    background-color: #F5F5F5;
+}
+   .photo img {
+    height:500px;
+    padding: 5px; 
+    margin-right: 10px;
+    margin-bottom: 10px; 
+    outline: 1px solid #666; /* Параметры рамки */
+    background: #F8F8FF; 
+    float: left; 
+   }
+
+.h2 {
+  text-align:center;
+  margin-top: -1rem;
+  margin-bottom: 3rem;
+}
+.active {
+    background-color:#fff;
+}

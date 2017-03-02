@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Finished";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<div class="container">
+    <div class="h2">
+    <h1>FINISHED</h1>
+</div>
+    <div class="row ">
+    @if (ViewBag.FinType != null)
+    {
+       
+        foreach (var type in ViewBag.FinType)
+        {
+           <span><b>FINISHED TYPE</b> <span class="h3">@type.name</span> </span>
+         <p>count reviews: <span class="h5">@type.countSelect</span></p> 
+        }
+    }
+
+<div class="col-md-6 col-sm-6 col-xs-6">
+    <h4>TYPE COUNT REVIEWS</h4>
+<table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Count Review</th>
+      
+        </tr>
+    </thead>
+             
+    @foreach(var type in ViewBag.Type){
+            <tr>
+                <td>@type.id</td>
+                <td>@type.name</td>
+                <td>@type.countSelect</td>
+           </tr>       
+    }
+    </table>
+</div>
+
+ <div class="col-md-6 col-sm-6 col-xs-6">
+        <h4>IMAGES COUNT REVIEWS</h4>
+<table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Count Review</th>
+      
+        </tr>
+    </thead>
+             
+        @foreach (var items in ViewBag.ItemsList){
+            <tr>
+                <td>@items.id</td>
+                <td>@items.path</td>
+                <td>@items.view</td>
+           </tr>       
+    }
+    </table>
+
+    </div>       
+  </div>
+</div>
+
+
+<script src="~/Script/Clear.js"> 
+
+
+</script>

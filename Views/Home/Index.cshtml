@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="h2">
+    <h2>SELECT ONE OF THE TWO</h2>
+</div>
+    <span class="text-right">Step: <strong id="step"></strong></span>
+    <div class="row ">
+        <div class="col-md-6 col-sm-6 col-xs-6 photo"><img  data-image-type="@ViewBag.idType1" data-image-id="@ViewBag.items1.id" class="img-responsive selectImage" src="@ViewBag.items1.path" /></div>
+        <div class="col-md-6 col-sm-4 col-xs-6 photo"><img data-image-type="@ViewBag.idType2" data-image-id="@ViewBag.items2.id" class="img-responsive selectImage" src="@ViewBag.items2.path" /></div>
+    </div>
+</div>
+
